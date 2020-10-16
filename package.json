@@ -1,0 +1,16 @@
+{
+  "name": "kombinat451-www",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.9.0",
+    "bootstrap-vue": "^2.17.3",
+    "nuxt": "^2.14.6",
+    "nuxt-buefy": "^0.4.3",
+    "prism-themes": "^1.4.0"
+  }
+}
