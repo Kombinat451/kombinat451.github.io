@@ -8,7 +8,7 @@ date: 2020-10-08
 
 At the moment you can not use Signal officially without a smartphone. The reason
 is that you need either the Android or iPhone app to register a Signal account.
-With some inofficial workarounds or hacks there exist some ways to circument
+With some in-official workarounds or hacks there exist some ways to circumvent
 this. But either way you still always need a phone number. In the following an
 overview is given:
 
@@ -23,7 +23,7 @@ overview is given:
   <dt>Signal-cli</dt>
   <dd>
 
-  Use the commandline interface for libsignal-service-java for registering,
+  Use the command line interface for libsignal-service-java for registering,
   contact list and group management. [ctrl.alt.coop](https://ctrl.alt.coop/)
   wrote a nice tutorial which can be found
   [here](https://ctrl.alt.coop/en/post/signal-without-a-smartphone/).
@@ -47,7 +47,7 @@ overview is given:
 ## Installation
 
 In the following we give small overview how to alter Signal-Desktop for Debian
-based Linux destributions, so you're able to use it as a standalone application
+based Linux distributions, so you're able to use it as a standalone application
 to register your account. You won't have all the features the smartphone app
 offers like UI support for altering your contact list or groups.
 
@@ -74,7 +74,7 @@ through the wayback machine of the internet archive.
 <tabs>
 <tab label="Monkeypatching">
 
-First you need to have access to the Javascript console. For that open Developer Tools (Click in topbar *View > Toggle Developer Tools*) and then type in the following (without the '>'):
+First you need to have access to the Javascript console. For that open Developer Tools (Click in top-bar *View>Toggle Developer Tools*) and then type in the following (without the '>'):
 
 ```
 > window.getEnvironment = function() { return 'development' }
@@ -90,13 +90,13 @@ immediate visual feedback as the work is done in the background.
 
 <asset-image alt="Standalone Registration View" src="signal-standalone.png"></asset-image>
 
-When you finished succesfuly registering a Signal account, restart Signal to get rid of your code changes.
+When you finished successfully registering a Signal account, restart Signal to get rid of your code changes.
 
 </tab>
 
 <tab label="Permant patch">
 
-An alternative to monkeypatching is to actually permanently get rid of the
+An alternative to monkey patching is to actually permanently get rid of the
 development checks in the source itself.  With this you can later on
 theoretically as well provide a new Signal-Desktop package.  Signal-Desktop
 itself is an electron based web application. To enable standalone support again
@@ -152,13 +152,13 @@ $ sudo cp app.asar /opt/Signal/resources/app.asar
 ```
 
 On first startup (before linking a device) you should now be able to set up
-this device as standalone. For that click in the topbar on *File>Set Up as
+this device as standalone. For that click in the top-bar on *File>Set Up as
 Standalone Device*.
 
 <asset-image alt="Standalone Registration View" src="signal-standalone.png"></asset-image>
 
 First verify and then register your number. Only click once on each button. The
-work is done in the background. After a succesfull registration you can safely
+work is done in the background. After a successful registration you can safely
 replace the app itself with the official versions as standalone support is not
 needed anymore. This means in case of available updates you can safely install
 them through `apt update`.
@@ -171,7 +171,7 @@ them through `apt update`.
 
 As we don't have a smartphone to alter contact lists or for group management,
 we need to do this by hand. Unfortunately sometimes this means we have to do
-this programmatically through the developer console:
+this by hand through the developer console:
 
 #### Add a contact
 1. Enter the number in the search bar (including country prefix like +1 or +49)
@@ -179,13 +179,13 @@ this programmatically through the developer console:
 3. Contact will appear in your contact after the first message is sent
 
 #### (Re-)name a contact
-1. Open Developer Tools (Click in topbar View > Toggle Developer Tools)
+1. Open Developer Tools (Click in top-bar *View>Toggle Developer Tools*)
 2. Click on Console and enter the following (replace <NUMBER> and <NAME> with
    the actual number of the contact you want to (re-) name and its new name:
    `ConversationController.get('<NUMBER>').set({'name':'<NAME>'});`
 
 #### (Un)Block a contact
-Open Developer Tools (Click in topbar View > Toggle Developer Tools) and enter the following (replace <NUMBER with the actual number of the contact):
+Open Developer Tools (Click in top-bar *View>Toggle Developer Tools*) and enter the following (replace <NUMBER with the actual number of the contact):
 
 ```
 > ConversationController.get('<NUMBER>').block();`
