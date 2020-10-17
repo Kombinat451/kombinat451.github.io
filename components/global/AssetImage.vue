@@ -1,6 +1,7 @@
 <template>
-<p>
-  <b-img style="max-width:35em" :src="imgSrc" :alt="alt" center />
+<p class="text-center">
+  <b-img class="mb-1" style="max-width:35em" :src="imgSrc" :alt="alt" center />
+  <i>{{alt}}</i>
 </p>
 </template>
 
