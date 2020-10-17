@@ -1,6 +1,7 @@
 ---
 title: Signal without a smartphone
 description: How to use Signal-Desktop without having a smartphone. This tutorial requires some knowledge about linux.
+date: 2020-10-08
 ---
 
 ## Overview

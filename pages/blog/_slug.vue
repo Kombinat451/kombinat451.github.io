@@ -2,7 +2,7 @@
   <article>
     <!--<prev-next :prev="prev" :next="next" />-->
     <h1>{{ article.title }}</h1>
-    <p class="text-center">{{ $formatDate(article.createdAt) }}</p>
+    <p class="text-center">{{ $formatDate(article.date) }}</p>
 
     <nav class="my-4 toc">
       <i>Table of content</i>
