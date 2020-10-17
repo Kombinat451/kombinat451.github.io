@@ -78,22 +78,31 @@ First you need to have access to the Javascript console. For that open Developer
 
 ```
 > window.getEnvironment = function() { return 'development' }
-> var appView = window.owsDesktopApp.appView
-> appView.openStandalone()
+> window.owsDesktopApp.openStandalone()
 ```
 
-After entering the last line, the standalone account creation view should appear. Verify your number and register your account. After that restart Signal to get rid of your code changes.
+After entering the last line, the standalone account creation view should
+appear. Verify your number by entering it in the *Phone Number* form and then
+click on *Send SMS*. With some delay you should receive a SMS with the
+verification code. Type this code into the second form and create your account
+by clicking on *Register*.  Only click once on each button. There is no
+immediate visual feedback as the work is done in the background.
+
+<asset-image alt="Standalone Registration View" src="signal-standalone.png"></asset-image>
+
+When you finished succesfuly registering a Signal account, restart Signal to get rid of your code changes.
 
 </tab>
 
 <tab label="Permant patch">
 
-An alternative to monkeypatching is to actually permanently get rid of the development checks in the source itself. 
-With this you can later on theoretically as well provide a new Signal-Desktop package.
-Signal-Desktop itself is an electron based web application. To enable standalone support
-again in Signal-Desktop, we need to alter the source itself. Most of it is
-packed as an asar archive: /opt/Signal/resources/app.asar. Thus firs we need
-to unpack this:
+An alternative to monkeypatching is to actually permanently get rid of the
+development checks in the source itself.  With this you can later on
+theoretically as well provide a new Signal-Desktop package.  Signal-Desktop
+itself is an electron based web application. To enable standalone support again
+in Signal-Desktop, we need to alter the source itself. Most of it is packed as
+an asar archive: /opt/Signal/resources/app.asar. Thus firs we need to unpack
+this:
 
 
 ```sh
@@ -143,13 +152,16 @@ $ sudo cp app.asar /opt/Signal/resources/app.asar
 ```
 
 On first startup (before linking a device) you should now be able to set up
-this device as standalone. For that click in the topbar on File > Set Up as
-Standalone Device. First verify and then register your number. Only click once
-on each button. The work is done in the background.
+this device as standalone. For that click in the topbar on *File>Set Up as
+Standalone Device*.
 
-After a succesfull registration you can safely replace the app itself with the
-official versions as standalone support is not needed anymore. This means in
-case of available updates you can safely install them through `apt update`.
+<asset-image alt="Standalone Registration View" src="signal-standalone.png"></asset-image>
+
+First verify and then register your number. Only click once on each button. The
+work is done in the background. After a succesfull registration you can safely
+replace the app itself with the official versions as standalone support is not
+needed anymore. This means in case of available updates you can safely install
+them through `apt update`.
 
 </tab>
 </tabs>
