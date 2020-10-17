@@ -1,24 +1,22 @@
 ---
 title: Signal without a smartphone
-description: How to use Signal-Desktop without having a smartphone. This tutorial requires some knowledge about linux.
+description: How to use Signal-Desktop on a Debian based Linux distribution without having a smartphone. This tutorial requires some knowledge about Linux.
 date: 2020-10-08
 ---
 
 ## Overview
 
-You may want to be able to use Signal without an actual smartphone. At the
-moment this is not supported officially as the smartphone apps are the only ones
-which can register an account, alter your contact list or groups out-of-the-box.
-
-With some workarounds or hacks there exist additional ways to register a
-Signal account. But either way you always need a phone number. In the following
-an overview is given:
+At the moment you can not use Signal officially without a smartphone. The reason
+is that you need either the Android or iPhone app to register a Signal account.
+With some inofficial workarounds or hacks there exist some ways to circument
+this. But either way you still always need a phone number. In the following an
+overview is given:
 
 <dl>
   <dt>Official way</dt>
   <dd>
 
-  Create the account by using the official smartphone apps
+  Create the account by using the official smartphone apps (Android or iPhone)
 
   </dd>
 
@@ -36,11 +34,11 @@ an overview is given:
   <dd>
 
   In development mode Signal-Desktop offers a standalone mode for registering a
-  Signal account. This functionality is deactivated in the official desktop
-  clients, but can be reactivated through a hack. This approach may be a bit
-  easier to follow than the *signal-cli* way. Unfortunately contact list
-  management is a bit cumbersome. Even worse group management is currently not
-  supported at all.
+  Signal account with their staging servers. This functionality is deactivated
+  in the official desktop clients, but can be reactivated through a hack. This
+  approach may be a bit easier to follow than the *signal-cli* way.
+  Unfortunately Signal-Desktop does not support proper contact list or group
+  management.
 
   </dd>
 </dl>
@@ -48,10 +46,10 @@ an overview is given:
 
 ## Installation
 
-I will give small overview how to alter Signal-Desktop for Debiand based Linux
-destributions, so you're able to use it as a standalone application to register
-your account. You won't have all the features the smartphone app offers like UI
-support for altering your contact list or groups.
+In the following we give small overview how to alter Signal-Desktop for Debian
+based Linux destributions, so you're able to use it as a standalone application
+to register your account. You won't have all the features the smartphone app
+offers like UI support for altering your contact list or groups.
 
 First we follow the [official way](https://signal.org/en/download) to actually
 download and install Signal-Desktop:
@@ -65,12 +63,12 @@ $ sudo apt update && sudo apt install signal-desktop
 
 ## Patching
 
-Signal-Desktop is written in Javascript. Hence, you can overwrite the source
-live. This means you can patch Signal-Desktop live or even permanently. The
-following work was done with
+Signal-Desktop is mainly written in Javascript. Hence, you can alter the source
+code of the application live. This means you can patch Signal-Desktop how you
+like. The following work was done with
 [v1.36.3](https://updates.signal.org/desktop/apt/pool/main/s/signal-desktop/signal-desktop_1.36.3_amd64.deb).
-In case it does not work for more recent versions you can find an
-[archived v1.36.3](https://web.archive.org/web/20201005144916/https://updates.signal.org/desktop/apt/pool/main/s/signal-desktop/signal-desktop_1.36.3_amd64.deb)
+In case it does not work for more recent versions you can find an [archived
+v1.36.3](https://web.archive.org/web/20201005144916/https://updates.signal.org/desktop/apt/pool/main/s/signal-desktop/signal-desktop_1.36.3_amd64.deb)
 through the wayback machine of the internet archive.
 
 <tabs>
