@@ -4,10 +4,10 @@ export default {
   components: true,
   head: {
     meta: [
-        { charset: 'utf-8' }
+      { charset: 'utf-8' },
+      { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'}
     ]
   },
-  //target: 'static',
   router: {
     extendRoutes(routes, resolve) {
       routes.push({
