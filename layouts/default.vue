@@ -1,10 +1,9 @@
 <template>
   <b-container>
     <b-row id="headline" class="justify-content-center mt-4">
-      <b-col sm="12" md="8"  class="my-auto">
+      <b-col cols="12" sm="12" md="8"  class="my-auto">
         <nuxt-link to="/">
           <h1 class="mb-0">Комбинат<small>451</small></h1>
-      <!--  <b-link href="https://en.wikipedia.org/wiki/HTTP_451" class="font-italic text-secondary">Unavailable For Legal Reasons</b-link>-->
         </nuxt-link>
         <b-navbar type="light" class="px-0">
           <b-navbar-nav>
@@ -13,7 +12,7 @@
           </b-navbar-nav>
         </b-navbar>
       </b-col>
-      <b-col sm="12" md="4" class="sloth">
+      <b-col cols="12" sm="12" md="4" class="sloth">
         <b-img width="90%" src="@/assets/sloth.svg" blank-color="black"/>
       </b-col>
     </b-row>
@@ -56,6 +55,7 @@ h3 {
 #headline h1 {
   font-family: 'Rubik Mono One', sans-serif;
   color: rgb(33, 37, 41);
+  font-size: 10vw;
 }
 
 @media (min-width: 500px) {
