@@ -3,10 +3,10 @@
 We are a small collective of activists who are into infrastructure and computer
 security.
 
-In case you want to reach use, write us an encrypted email at
+In case you want to reach us, write us an encrypted email at
 [www@kombinat451.org](mailto:www@kombinat451.org).
 
-Our PGP key is as follows and is identified with
+Our PGP key is as follows and can be identified with
 `4976 83B5 1E50 B849 EC80  5DF3 09D9 0E91 2014 DAB5` as fingerprint:
 
 <div style="max-width: 650px">
