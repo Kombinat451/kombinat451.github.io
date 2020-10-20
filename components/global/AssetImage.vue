@@ -1,8 +1,14 @@
 <template>
-<p class="text-center">
-  <b-img class="mb-1" style="max-width:35em" :src="imgSrc" :alt="alt" center />
-  <i>{{alt}}</i>
-</p>
+<b-container>
+  <b-row>
+    <b-img class="mb-1" :src="imgSrc" :alt="alt" center />
+    <b-col cols="12">
+      <p class="text-center">
+        <i>{{alt}}</i>
+      </p>
+    </b-col>
+  </b-row>
+</b-container>
 </template>
 
 <script>
